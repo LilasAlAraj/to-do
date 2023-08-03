@@ -193,6 +193,9 @@ function deleteTask() {
 
     id = (child.parentNode.children[0]).value
     row = child.parentNode.parentNode.parentNode
+
+    if(row.tagName === 'TD')
+    row = row.parentNode
     console.log(row)
     console.log(id);
     $.ajaxSetup({
