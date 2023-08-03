@@ -1,0 +1,80 @@
+h1,
+label {
+    color: var(--main-color);
+    font-weight: bold;
+
+
+}
+
+.form-check-input:checked {
+    background-color: var(--main-color-alpha);
+    border-color: transparent;
+}
+
+#addNewCaseButton,
+button[type="submit"] {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+
+    border: transparent;
+
+}
+
+input[type='checkbox']{
+    float: right;
+}
+
+#addNewCaseButton:hover,
+
+button[type="submit"]:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+
+    border: transparent;
+
+}
+
+.navbar {
+    background-color: var(--main-color);
+}
+
+.nav-link {
+    color: var(--bg-color);
+}
+
+
+.btn-link,
+.btn-link:hover {
+    color: var(--main-color);
+
+    text-decoration: none;
+
+}
+
+.card-header {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+
+}
+
+
+.error {
+    color: red;
+    font-weight: normal;
+}
+
+label.important::after {
+    content: '*';
+    color: red;
+
+}
+
+label.important{
+display: flex;
+justify-content: space-between;
+}
+
+
+i{
+    width: 100%;
+}
