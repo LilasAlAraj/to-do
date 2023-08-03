@@ -61,6 +61,11 @@ function store() {
 
                         showSuccess('Your task has been added successfully.', 'success');
                         closeModal();
+                        name = $('#name').val('');
+                        description = $('#description').val('');
+                        priority = $('#priority').val('Choose the priority');
+                        date = $('#date').val('');
+
                         $('#addTaskModal').modal('hide');
                         body = document.getElementById('table-body');
 

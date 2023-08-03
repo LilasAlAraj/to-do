@@ -109,7 +109,7 @@
                                     <select id="priority" name="priority"
                                         class="form-control @error('priority') is-invalid @enderror"
                                         value="{{ old('priority') }}"required>
-                                        <option disabled selected hidden style="color: black"> Choose the priority</option>
+                                        <option disabled selected hidden style="color: black" > Choose the priority</option>
                                         <option value='High' style="color: red"> Heigh</option>
                                         <option value='Middle' style="color: orange"> Middle</option>
                                         <option value='Low' style="color: greenyellow"> Low</option>
