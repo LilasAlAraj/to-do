@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url('img/to-do.jpg')">
 
 
 
@@ -75,8 +75,10 @@
         </div>
     </nav>
 
-    <main>
+    <main style="font-size: 75px; padding-top:25%; color :var(--main-color-alpha); font-family:'Courier New', Courier, monospace">
 
+
+        Manage your time.. Manage your life
     </main>
 
 
