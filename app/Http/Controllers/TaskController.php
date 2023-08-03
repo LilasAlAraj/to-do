@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class TaskController extends Controller
@@ -66,6 +67,7 @@ class TaskController extends Controller
         $task->description = $request->description;
         $task->priority = $request->priority;
         $task->status = false;
+        $task->user_id=Auth::user()->id;
         if ($task->save()) {
             $id = task::latest()->first()->id;
 

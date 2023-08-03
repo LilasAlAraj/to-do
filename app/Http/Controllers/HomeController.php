@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $tasks = task::all();
+        $tasks = task::where('user_id',Auth::user()->id)->get();
 
         return view('home', compact('tasks'));
     }
