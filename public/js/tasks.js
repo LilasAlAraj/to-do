@@ -199,8 +199,8 @@ function deleteTask() {
     id = (child.parentNode.children[0]).value
     row = child.parentNode.parentNode.parentNode
 
-    if(row.tagName === 'TD')
-    row = row.parentNode
+    if (row.tagName === 'TD')
+        row = row.parentNode
     console.log(row)
     console.log(id);
     $.ajaxSetup({
@@ -225,6 +225,8 @@ function deleteTask() {
 
                 showSuccess('Your task has been deleted successfully.', 'success');
                 row.remove();
+                updateTheOrder()
+
 
             } else {
 
@@ -276,6 +278,7 @@ function editTaskStatus() {
                 showSuccess('Your task has been incompleted.', 'error');
 
             }
+
         },
 
         error: function (response) {
@@ -288,3 +291,17 @@ function editTaskStatus() {
     });
 
 }
+
+
+function updateTheOrder() {
+    var rows = $('#table-body tr');
+
+    // Loop through each row and edit the first cell content
+    rows.each(function (index, row) {
+        // Find the first cell (td) in the row
+        var firstCell = $(row).find('td').first();
+
+        // Edit the content of the first cell
+        firstCell.text((index + 1));
+    })
+};
