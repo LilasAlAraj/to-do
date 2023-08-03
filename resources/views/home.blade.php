@@ -138,8 +138,7 @@
 
                             <div>
                                 <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description"
-                                    style="max-height:8em;" required>
-                            </textarea>
+                                    style="max-height:8em;" required></textarea>
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
