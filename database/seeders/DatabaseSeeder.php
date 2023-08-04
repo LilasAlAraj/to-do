@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,13 +14,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $this->call(ToDoListSeeder::class);
+        $userIds = User::pluck('id');
 
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // checking if there is not any user then create users by calling user seeder
+        if (count($userIds) === 0) {
+
+            $this->call(UserSeeder::class);
+
+        }
+        // create tasks by calling the ToDoList seeder
+        $this->call(ToDoListSeeder::class);
+
+
     }
 }

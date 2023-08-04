@@ -61,10 +61,10 @@ function store() {
 
                         showSuccess('Your task has been added successfully.', 'success');
                         closeModal();
-                        name = $('#name').val('');
-                        description = $('#description').val('');
-                        priority = $('#priority').val('Choose the priority');
-                        date = $('#date').val('');
+                         $('#name').val('');
+                         $('#description').val('');
+                        $('#priority').val('Choose the priority');
+                        $('#date').val('');
 
                         $('#addTaskModal').modal('hide');
                         body = document.getElementById('table-body');
@@ -116,7 +116,7 @@ function store() {
                         // Append the HTML content to the operations element
                         row = document.createElement('tr');
                         countCol = document.createElement('td');
-                        countCol.innerHTML = response.count
+                        countCol.innerHTML = body.childNodes.length
 
                         nameCol = document.createElement('td');
                         nameCol.innerHTML = name
